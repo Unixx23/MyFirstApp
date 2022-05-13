@@ -4,11 +4,13 @@ internal class Homework3
 {
     static void Main(string[] args)
     {
-        int pictures = 52;
-        int line = 3;
-        int sumLine = pictures / line;
-        int surplus = pictures % line;
-        Console.WriteLine($"Полностью заполненных рядов будет {sumLine}. Изображений останется {surplus}.");
+        Console.WriteLine("Введите ваше имя:");
+        string name = Console.ReadLine();
+        Console.WriteLine("Сколько вам лет?");
+        string age = Console.ReadLine();
+        Console.WriteLine("Кем вы работаете?");
+        string profession = Console.ReadLine();
+        Console.WriteLine($"Вас зовут {name}. Вам {age} лет. Вы работаете {profession}");
 
     }
 }
