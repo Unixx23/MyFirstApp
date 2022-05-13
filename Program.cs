@@ -13,7 +13,7 @@ internal class Program
         double density = weight / volume;
         string word = "code";
         char symbol = '!';
-        bool answer = true;
+        bool canFinish = true;
     }
 }
 
