@@ -4,16 +4,20 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        byte number = 1;
-        sbyte numberTwo = -1;
-        float weight = 1.25f;
-        short distance = 120;
-        long height = 50;
-        int volume = 90;
-        double density = weight / volume;
-        string word = "code";
-        char symbol = '!';
-        bool canFinish = true;
+        Console.WriteLine("Введите ваше имя:");
+        string name = Console.ReadLine();
+        Console.WriteLine("Сколько вам лет?");
+        string age = Console.ReadLine();
+        Console.WriteLine("Вы программист?");
+        string work = Console.ReadLine();
+        if (work == "нет")
+        {
+            Console.WriteLine($"Вас зовут {name}. Вам {age} лет. Вы учитесь на программиста.");
+        }
+        else
+        {
+            Console.WriteLine("Вас зовут " + name + ", Вам " + age + " лет. Вы программист");
+        }
     }
 }
 
