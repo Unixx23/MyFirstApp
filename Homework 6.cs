@@ -11,7 +11,7 @@ internal class Program
          int gold = Convert.ToInt32(Console.Deadline());
          Console.WriteLine($"Сегодня в продаже кристаллы всего по {crystalPrice} золота!");
          Console.WriteLine("Сколько кристаллов желаете приобрести?");
-         int buyingCrystals = Convert.ToInt32(Console.ReadLine());
+         int purchasedCrystals = Convert.ToInt32(Console.ReadLine());
          
     }
 }
