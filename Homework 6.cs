@@ -15,8 +15,10 @@ internal class Program
          int costOfCrystals = purchasedCrystals * crystalPrice;
          gold = gold - costOfCrystals;
          crystals = crystals + purchasedCrystals;
-         Console.WriteLine($"Вы приобрели {purchasedCrystals}
-         за {costaofCrystals} золота");
+         Console.WriteLine($"Вы приобрели {purchasedCrystals} за {costaofCrystals} золота");
          Console.WriteLine($"У вас на счету {crystals} кристаллов и {gold} золота");
     }
+    
 }
+
+         
