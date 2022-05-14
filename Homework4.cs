@@ -6,9 +6,9 @@ internal class Homework4
     {
         int pictures = 52;
         int rowOfPictures = 3;
-        int totalRows = pictures / row;
-        int surplus = pictures % row;
-        Console.WriteLine($"Полностью заполненных рядов будет {totalRows}. Изображений останется {surplus}.");
+        int totalRows = pictures / rowOfPictures;
+        int surplusOfPictures = pictures % rowOfPictures;
+        Console.WriteLine($"Полностью заполненных рядов будет {totalRows}. Изображений останется {surplusOfPictures}.");
     }
 }
 
