@@ -12,6 +12,11 @@ internal class Program
          Console.WriteLine($"Сегодня в продаже кристаллы всего по {crystalPrice} золота!");
          Console.WriteLine("Сколько кристаллов желаете приобрести?");
          int purchasedCrystals = Convert.ToInt32(Console.ReadLine());
-         
+         int goldPay = purchased crystals * crystalPrice;
+         gold = gold - goldPay;
+         crystals = crystals + purchasedCrystals;
+         Console.WriteLine($"Вы приобрели {purchasedCrystals}
+         за {goldPay} золота");
+         Console.WriteLine($"У вас на счету {crystals} кристаллов и {gold} золота");
     }
 }
