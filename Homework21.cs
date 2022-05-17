@@ -7,9 +7,9 @@ internal class Homework21
         Console.Write("Введите сообщение:");
         string message = Console.ReadLine();
         Console.WriteLine("Сколько раз его повторить?");
-        int i = Convert.ToInt32(Console.ReadLine());
+        int repeats = Convert.ToInt32(Console.ReadLine());
         
-        while(i-->0)
+        while(repeats-->0)
         {
             Console.WriteLine(message);
         }
