@@ -5,9 +5,10 @@ internal class Homework23
     static void Main(string[] args)
     {
         int step = 7;
-        Int finalNumber
+        int finalNumber = 96;
+        int startNumber = 5;
         
-        for(int number = 5; number ≤ finalNumber; number += step;)
+        for(int number = startNumber; number ≤ finalNumber; number += step;)
         {
             Console.Write(number + " ");
         }
