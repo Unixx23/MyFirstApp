@@ -6,8 +6,7 @@ internal class Homework23
     {
         for(int number = 5; number < 97; number += 7;)
         {
-            Console.WriteLine(number + " ");
+            Console.Write(number + " ");
         }
     }
 }
-
