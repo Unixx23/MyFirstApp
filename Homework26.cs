@@ -13,7 +13,7 @@ internal class Homework26
         string message = "Вы еще не написали заметку";
         string passwordInput;
         string userInput = "";
-        bool check;
+        bool isCorrect;
 
         while(userInput  != "5")
         {
@@ -32,9 +32,9 @@ internal class Homework26
                     {
                         Console.Write("Введите пароль:");
                         passwordInput = Console.ReadLine();
-                        check = password == passwordInput;
+                        isCorrect = password == passwordInput;
 
-                        if (check)
+                        if (isCorrect)
                         {
                             Console.Write("Заметка:");
                             message = Console.ReadLine();
@@ -54,9 +54,9 @@ internal class Homework26
                     {
                         Console.Write("Введите пароль:");
                         passwordInput = Console.ReadLine();
-                        check = password == passwordInput;
+                        isCorrect = password == passwordInput;
 
-                        if (check)
+                        if (isCorrect)
                         {
                             Console.WriteLine(message);
                         }
@@ -80,9 +80,9 @@ internal class Homework26
                     {
                         Console.Write("Введите пароль:");
                         passwordInput = Console.ReadLine();
-                        check = password == passwordInput;
+                        isCorrect = password == passwordInput;
 
-                        if (check)
+                        if (isCorrect)
                         {
                             password = "0";
                             Console.WriteLine("Пароль сброшен");
