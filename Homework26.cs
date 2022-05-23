@@ -33,6 +33,7 @@ internal class Homework26
                         Console.Write("Введите пароль:");
                         passwordInput = Console.ReadLine();
                         check = password == passwordInput;
+
                         if (check)
                         {
                             Console.Write("Заметка:");
@@ -43,7 +44,6 @@ internal class Homework26
                             Console.WriteLine("Вы ввели неправильный пароль");
                         }
                     }
-                    
                     break;
                 case "2":
                     if (password == "0")
@@ -55,6 +55,7 @@ internal class Homework26
                         Console.Write("Введите пароль:");
                         passwordInput = Console.ReadLine();
                         check = password == passwordInput;
+
                         if (check)
                         {
                             Console.WriteLine(message);
@@ -64,7 +65,6 @@ internal class Homework26
                             Console.WriteLine("Вы ввели неправильный пароль");
                         }
                     }
-
                     break;
                 case "3":
                     Console.WriteLine("Установите пароль:");
@@ -92,11 +92,9 @@ internal class Homework26
                             Console.WriteLine("Вы ввели неверный пароль");
                         }
                     }
-
                     break;
             }
         }
-
         Console.WriteLine("До свидания");
     }
 }
