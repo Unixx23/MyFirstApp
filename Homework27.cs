@@ -1,18 +1,28 @@
-Console.Write("Введите имя: ");
-string name = Console.ReadLine();
-Console.Write("Введите символ: ");
-char symbol = Console.Readline();
-int length = –2;
+﻿using System;
 
-while(length++ < name.Lenght)
+internal class Homework27
 {
-Console.Write(symbol);
+    static void Main(string[] args)
+    {
+        Console.Write("Введите имя: ");
+        string name = Console.ReadLine();
+        Console.Write("Введите символ: ");
+        char symbol = Convert.ToChar(Console.ReadLine());
+        int length = -1;
+
+        while (length++ < name.Length)
+        {
+            Console.Write(symbol);
+        }
+        Console.WriteLine(symbol);
+        Console.WriteLine(symbol + name + symbol);
+        length = -1;
+
+        while (length++ < name.Length)
+        {
+            Console.Write(symbol);
+        }
+        Console.WriteLine(symbol);
+    }
 }
 
-Console.WriteLine(symbol);
-Console.WriteLine(symbol + name + symbol);
-
-while(length++ ≤ name.Lenght)
-{
-Console.Write(symbol);
-}
