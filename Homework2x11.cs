@@ -5,7 +5,7 @@ internal class Homework2x11
     static void Main(string[] args)
     {
         string text = "()(()((())))";
-        char symbol = Convert.ToChar(")");
+        char bracket =')';
         int sumOfBrackets = 0;
         int maximumLevelOfBrackets = 0;
 
@@ -13,7 +13,7 @@ internal class Homework2x11
 
         for(int i = 0; i < text.Length; i++)
         {
-            if(text[i] == symbol)
+            if(text[i] == bracket)
             {
                 sumOfBrackets--;
             }
