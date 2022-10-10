@@ -66,6 +66,12 @@ internal class Homework2x12
             
             playerHealth -= bossDamage;
             bossDamage = 50;
+
+            if(bossHealth<=0 & playerHealth <= 0) 
+            {
+                Console.WriteLine("Ничья");
+                break;
+            }
         }
 
         if(bossHealth < 1)
