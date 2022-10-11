@@ -1,6 +1,6 @@
 ﻿using System;
 
-internal class Homework3x1
+internal class Homework3x2
 {
     static void Main(string[] args)
     {
