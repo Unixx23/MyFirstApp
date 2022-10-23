@@ -4,40 +4,42 @@ internal class Homework3x3
 {
     static void Main(string[] args)
     {
-        int[] A = new int[30];
-        Random rand = new Random();
+        int[] array = new int[30];
+        Random random = new Random();
+        int minimumRandomNumber = 0;
+        int maximumRandomNumber = 100;
 
-        for (int i = 0; i < A.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            A[i] = rand.Next(0, 100);
-            Console.Write(A[i] + " ");
+            array[i] = random.Next(minimumRandomNumber, maximumRandomNumber);
+            Console.Write(array[i] + " ");
         }
 
         Console.WriteLine("\nЛокальные максимумы массива: ");
 
-        for (int i = 0; i < A.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
             if (i == 0)
             {
-                if (A[0] > A[1])
+                if (array[0] > array[1])
                 {
-                    Console.WriteLine(A[0]);
+                    Console.WriteLine(array[0]);
                 }
                 continue;
             }
 
-            if (i == A.Length-1)
+            if (i == array.Length-1)
             {
-                if (A[A.Length - 1] > A[A.Length - 2])
+                if (array[array.Length - 1] > array[array.Length - 2])
                 {
-                    Console.WriteLine(A[A.Length - 1]);
+                    Console.WriteLine(array[array.Length - 1]);
                 }
                 break;
             }
 
-            if (A[i] > A[i-1] & A[i] > A[i + 1])
+            if (array[i] > array[i-1] & array[i] > array[i + 1])
             {
-                Console.WriteLine(A[i]);
+                Console.WriteLine(array[i]);
                 continue;
             }
         }
