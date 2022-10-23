@@ -7,15 +7,17 @@ internal class Homework3x1
         int[,] array = new int[2,2];
         int sum = 0;
         int multiplication = 1;
-        Random rand = new Random();
+        Random random = new Random();
         int lineNumber = 2;
         int columnNumber = 1;
+        int minimumRandomNumber = 0;
+        int maximumRandomNumber = 9;
 
         for(int i = 0; i < array.GetLength(0); i++)
         {
             for(int j = 0; j < array.GetLength(1); j++)
             {
-                array[i, j] = rand.Next(0, 9);
+                array[i, j] = random.Next(minimumRandomNumber,maximumRandomNumber);
                 Console.Write(array[i, j] + " ");
             }
             
