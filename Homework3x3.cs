@@ -17,31 +17,23 @@ internal class Homework3x3
 
         Console.WriteLine("\nЛокальные максимумы массива: ");
 
-        for (int i = 0; i < array.Length; i++)
+        if (array[0] > array[1])
         {
-            if (i == 0)
-            {
-                if (array[0] > array[1])
-                {
-                    Console.WriteLine(array[0]);
-                }
-                continue;
-            }
+                Console.WriteLine(array[0]);
+        }
 
-            if (i == array.Length-1)
-            {
-                if (array[array.Length - 1] > array[array.Length - 2])
-                {
-                    Console.WriteLine(array[array.Length - 1]);
-                }
-                break;
-            }
-
+        for (int i = 1; i < array.Length-1; i++)
+        {
             if (array[i] > array[i-1] & array[i] > array[i + 1])
             {
                 Console.WriteLine(array[i]);
                 continue;
             }
+        }
+
+        if (array[array.Length - 1] > array[array.Length - 2])
+        {
+                Console.WriteLine(array[array.Length - 1]);
         }
     }
 }
