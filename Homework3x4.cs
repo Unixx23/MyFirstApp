@@ -35,14 +35,14 @@ internal class Homework3x4
             else
             {
                 array[array.Length-1] = Convert.ToInt32(userInput);
-                int[] array2 = new int[array.Length + 1];
+                int[] tempArray = new int[array.Length + 1];
 
                 for (int i = 0; i < array.Length; i++)
                 {
-                    array2[i] = array[i];
+                    tempArray[i] = array[i];
                 }
 
-                array = array2;
+                array = tempArray;
             }
         }
     }
