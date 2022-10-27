@@ -8,6 +8,7 @@ internal class Homework3x3
         Random random = new Random();
         int minimumRandomNumber = 0;
         int maximumRandomNumber = 100;
+        int numberOfDifference = 2;
 
         for (int i = 0; i < array.Length; i++)
         {
@@ -19,21 +20,20 @@ internal class Homework3x3
 
         if (array[0] > array[1])
         {
-                Console.WriteLine(array[0]);
+            Console.WriteLine(array[0]);
         }
 
-        for (int i = 1; i < array.Length-1; i++)
+        for (int i = 1; i < array.Length - 1; i++)
         {
-            if (array[i] > array[i-1] & array[i] > array[i + 1])
+            if (array[i] >= array[i - 1] & array[i] >= array[i + 1])
             {
                 Console.WriteLine(array[i]);
-                continue;
             }
         }
 
-        if (array[array.Length - 1] > array[array.Length - 2])
+        if (array[array.Length - 1] > array[array.Length - numberOfDifference])
         {
-                Console.WriteLine(array[array.Length - 1]);
+            Console.WriteLine(array[array.Length - 1]);
         }
     }
 }
