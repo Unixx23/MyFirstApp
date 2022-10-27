@@ -4,14 +4,15 @@ internal class Homework3x4
 {
     static void Main(string[] args)
     {
+        string Sum = "sum";
+        string Exit = "exit";
         int[] array = new int[0];
         string userInput;
         bool isOpen = true;
-        const string Exit = "exit";
 
         Console.WriteLine("Введите число, чтобы сохранить его");
-        Console.WriteLine("Введите 'sum', чтобы сложить все, сохраненные числа");
-        Console.WriteLine("Введите 'exit', чтобы выйти");
+        Console.WriteLine("Введите "+Sum+", чтобы сложить все, сохраненные числа");
+        Console.WriteLine("Введите "+Exit+", чтобы выйти");
 
         while (isOpen)
         {
@@ -21,7 +22,7 @@ internal class Homework3x4
             {
                 isOpen = false;
             }
-            else if (userInput == "sum")
+            else if (userInput == Sum)
             {
                 int sum = 0;
 
