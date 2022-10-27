@@ -4,34 +4,34 @@ internal class Homework3x4
 {
     static void Main(string[] args)
     {
-        string Sum = "sum";
-        string Exit = "exit";
+        string sum = "sum";
+        string exit = "exit";
         int[] array = new int[0];
         string userInput;
         bool isOpen = true;
 
         Console.WriteLine("Введите число, чтобы сохранить его");
-        Console.WriteLine("Введите "+Sum+", чтобы сложить все, сохраненные числа");
-        Console.WriteLine("Введите "+Exit+", чтобы выйти");
+        Console.WriteLine("Введите " + sum + ", чтобы сложить все, сохраненные числа");
+        Console.WriteLine("Введите " + exit + ", чтобы выйти");
 
         while (isOpen)
         {
             userInput = Console.ReadLine();
 
-            if (userInput == Exit)
+            if (userInput == exit)
             {
                 isOpen = false;
             }
-            else if (userInput == Sum)
+            else if (userInput == sum)
             {
-                int sum = 0;
+                int sumOfNumbers = 0;
 
                 for (int i = 0; i < array.Length; i++)
                 {
-                    sum += array[i];
+                    sumOfNumbers += array[i];
                 }
 
-                Console.WriteLine($"Сумма всех введенных чисел: {sum}");
+                Console.WriteLine($"Сумма всех введенных чисел: {sumOfNumbers}");
             }
             else
             {
