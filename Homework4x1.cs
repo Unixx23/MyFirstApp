@@ -36,6 +36,7 @@ internal class Homework4x1
                 case 3:
                     Console.Write("Введите фамилию: ");
                     surname = Console.ReadLine();
+                    Console.WriteLine("Вы действительно хотите удалить " + SearchDossier(names,surnames,surname,indexOfDossier) + "?");
                     surnames = DeliteDossier(surnames, surname);
 
                     break;
