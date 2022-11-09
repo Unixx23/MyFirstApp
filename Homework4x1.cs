@@ -37,6 +37,10 @@ internal class Homework4x1
                     Console.Write("Введите фамилию: ");
                     surname = Console.ReadLine();
                     Console.WriteLine("Вы действительно хотите удалить " + SearchDossier(names,surnames,surname,indexOfDossier) + "?");
+                    // if check==notFound
+                    //cw(SearchD);
+                    //else cw(really SearchD ?);
+                    //if true
                     surnames = DeliteDossier(surnames, surname);
 
                     break;
@@ -100,6 +104,7 @@ internal class Homework4x1
 
     static string SearchDossier(string[] names,string[] surnames, string surname,int indexOfDossier)
     {
+        string resultSearching;
         for(int i = 0;i < surnames.Length; i++)
         {
             if(surnames[i] == surname)
@@ -110,11 +115,13 @@ internal class Homework4x1
 
             if (i == surnames.Length-1)
             {
-                return "Досье не найдено";
+                resultSaerching = "Досье не найдено";
+                return resultSearching;
             }
         }
 
-        return $"Досье: {names[indexOfDossier]} - {surnames[indexOfDossier]}";
+        resultSearching = $"Досье: {names[indexOfDossier]} - {surnames[indexOfDossier]}";
+        return resultSearching;
     }
 }
 
