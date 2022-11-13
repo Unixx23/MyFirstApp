@@ -114,19 +114,21 @@ internal class Homework4x1
 
         for(int i = 0;i < surnames.Length; i++)
         {
-            if(names[i] == surname)
+            if(names[i].Contains(surname))
             {
                 indexOfDossier = i;
-                break;
+                return $"Досье: {indexOfDossier+1}. {names[indexOfDossier]} - {surnames[indexOfDossier]}";
             }
 
-            if (i == surnames.Length-1)
+            else
             {
                 return "Досье не найдено";
             }
         }
+       }
+        }
+      }
 
-        return $"Досье: {indexOfDossier+1}. {names[indexOfDossier]} - {surnames[indexOfDossier]}";
     }
 }
 
