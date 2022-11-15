@@ -22,7 +22,7 @@ internal class Homework4x1
             switch (userInput)
             {
                 case"1":
-                    Console.Write("Введите фамилию: ");
+                    Console.Write("Введите ФИО: ");
                     string name = Console.ReadLine();
                     fullNames = AddDossier(fullNames, name);
                     Console.Write("Введите должность: ");
@@ -35,12 +35,22 @@ internal class Homework4x1
                     Console.ReadKey();
                     break;
                 case "3":
-                    if (SearchDossier(positions, fullNames, ref surname, ref indexOfDossier) != dossierNotFound)
+                    if (SearchDossier(fullNames, positions, ref surname, ref indexOfDossier) != dossierNotFound)
                     {
-                        Console.WriteLine($"Выполняется удаление {indexOfDossier+1}. {fullNames[indexOfDossier]} - {positions[indexOfDossier]}...");
-                        fullNames = DeliteDossier(fullNames, indexOfDossier);
-                        positions = DeliteDossier(positions, indexOfDossier);
-                        Console.WriteLine("Удаление завершено");
+                        Console.WriteLine($"Вы действительно хотите удалить досье {indexOfDossier + 1}. {fullNames[indexOfDossier]} - {positions[indexOfDossier]}?\n1 - Да.\n2 - Нет");
+                        
+                        if(Console.ReadLine() == "1")
+                        {
+                            Console.WriteLine($"Выполняется удаление {indexOfDossier + 1}. {fullNames[indexOfDossier]} - {positions[indexOfDossier]}...");
+                            fullNames = DeliteDossier(fullNames, indexOfDossier);
+                            positions = DeliteDossier(positions, indexOfDossier);
+                            Console.WriteLine("Удаление завершено");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Удаление отменено");
+                            break;
+                        }
                     }
                     else
                     {
@@ -112,23 +122,16 @@ internal class Homework4x1
         Console.Write("Введите фамилию: ");
         surname = Console.ReadLine();
 
-        for(int i = 0;i < surnames.Length; i++)
+        for(int i = 0;i < names.Length; i++)
         {
-            if(names[i].Contains(surname))
+            if (names[i].Contains(surname))
             {
                 indexOfDossier = i;
-                return $"Досье: {indexOfDossier+1}. {names[indexOfDossier]} - {surnames[indexOfDossier]}";
-            }
-
-            else
-            {
-                return "Досье не найдено";
+                return $"Досье: {indexOfDossier + 1}. {names[indexOfDossier]} - {surnames[indexOfDossier]}";
             }
         }
-       }
-        }
-      }
 
+        return "Досье не найдено";
     }
 }
 
